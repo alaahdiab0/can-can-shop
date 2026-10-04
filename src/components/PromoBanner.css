@@ -1,0 +1,107 @@
+.promo-section {
+  max-width: 1200px;
+  margin: 40px auto 60px;
+  padding: 0 24px;
+}
+
+.promo-banner {
+  position: relative;
+  min-height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-image: url("/Banner/promo.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.promo-content {
+  padding: 0 48px;
+  max-width: 45%;
+  color: #fff;
+}
+
+.promo-tag {
+  display: inline-block;
+  color: #f15a24;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.promo-title {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.promo-title span {
+  color: #f15a24;
+}
+
+.promo-text {
+  margin: 10px 0 0;
+  font-size: 20px;
+  color: #f3e3d3;
+}
+
+/* Button */
+.promo-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 22px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f97316, #e8590c);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(232, 89, 12, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.promo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(232, 89, 12, 0.45);
+}
+
+.promo-btn svg {
+  margin-left: 8px;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.promo-btn:hover svg {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .promo-banner {
+    min-height: 220px;
+  }
+
+  .promo-content {
+    max-width: 60%;
+    padding: 0 20px;
+  }
+
+  .promo-title {
+    font-size: 28px;
+  }
+
+  .promo-text {
+    font-size: 15px;
+  }
+
+  .promo-btn {
+    padding: 10px 22px;
+    font-size: 14px;
+  }
+}

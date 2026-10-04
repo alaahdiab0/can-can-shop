@@ -1,6 +1,19 @@
+
+import { Baloo_2 } from "next/font/google";
+import { Fredoka } from "next/font/google";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+const baloo = Baloo_2({
+  subsets: ["latin"],
+  variable: "--font-baloo",
+});
+
+const fredoka = Fredoka({
+  variable: "--font-fredoka",
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
