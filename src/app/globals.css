@@ -525,3 +525,9 @@ nav {
     display: flex;
   }
 }
+@media (max-width: 600px) {
+  .hero::before {
+    background: rgba(255, 248, 240, 0.12);
+    opacity: 1;
+  }
+}
