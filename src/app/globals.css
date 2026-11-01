@@ -58,7 +58,7 @@ nav {
   height: 550px;
   margin-top: 80px;
 
-  background-image: url("/hero-cake.png.png");
+  background-image: url("/hero-cake.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -144,5 +144,65 @@ nav {
   padding: 45px 6% 40px;
   background: #f8f1e7;
   overflow: hidden;
+}
+/* ===== أساسيات الموبايل ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.small-text  { font-size: clamp(12px, 3vw, 16px); }
+.welcome     { font-size: clamp(32px, 9vw, 64px); line-height: 1.1; }
+.description { font-size: clamp(14px, 3.8vw, 18px); }
+
+.can-can-title {
+  display: block;
+  width: min(320px, 80%);
+  height: auto;
+}
+
+/* ===== الشبكات (الكاتيجوري والمنتجات) ===== */
+.categories-grid,
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+/* ===== موبايل ===== */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 70vh;
+    text-align: center;
+  }
+
+  .can-can-title {
+    margin: 0 auto;
+  }
+
+  .hero button {
+    width: 100%;
+    max-width: 260px;
+  }
 }
 }

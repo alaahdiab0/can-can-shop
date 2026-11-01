@@ -7,7 +7,7 @@ export default function Hero() {
         <p className="welcome">Welcome to</p>
 
         <img
-          src="/can.can.word.png"
+          src="/logo-word.png"
           alt="Can Can"
           className="can-can-title"
         />
