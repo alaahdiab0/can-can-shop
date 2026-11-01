@@ -12,7 +12,16 @@ export default function Navbar() {
         <img src="/logo.png" alt="Can Can Logo" />
       </div>
 
-      
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>
         <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
