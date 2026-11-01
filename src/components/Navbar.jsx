@@ -1,18 +1,36 @@
+
+"use client";
+
+import { useState } from "react";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-      <nav>
+    <nav className="navbar">
       <div className="logo">
-        <img src="/logo.png" alt="Can Can Logo" /> 
+        <img src="/logo.png" alt="Can Can Logo" />
       </div>
 
-      <div className="nav-links">
-        <a href="/">Home</a>
-        <a href="/products">Products</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
+        <a href="/products" onClick={() => setMenuOpen(false)}>Products</a>
+        <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
+        <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
       </div>
 
-      <div>
+      <div className="cart">
         <button>🛒</button>
       </div>
     </nav>
