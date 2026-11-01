@@ -1,4 +1,6 @@
 
+
+import FooterSection from "@/components/FooterSection";
 import PromoBanner from "@/components/PromoBanner";
 import FeaturedProducts from "@/components/FeaturedProducts";
 import CategoriesSection from "@/components/CategoriesSection";
@@ -14,10 +16,9 @@ export default function Home() {
       <CategoriesSection />
       <FeaturedProducts />
       <PromoBanner />
+      <FooterSection />
     </main>
   );
-
-
 
 
 }
