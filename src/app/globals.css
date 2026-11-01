@@ -1,151 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff8f0;
-  color: #4a2c20;
-}
-
-/* Navbar */
-
-nav {
-  width: 100%;
-  height: 80px;
-  padding: 0 60px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.logo img {
-  width: 180px;
-  height: auto;
-}
-
-.nav-links {
-  display: flex;
-  gap: 35px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #4a2c20;
-  font-size: 16px;
-}
-
-.cart {
-  border: none;
-  background: transparent;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-
-/* Hero */
-
-.hero {
-  height: 550px;
-  margin-top: 80px;
-
-  background-image: url("/hero-cake.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;      /* بدل flex-start */
-  justify-content: flex-start;
-
-  padding: 80px 60px;
-}
-.hero-content {
-  width: 50%;
-  color: #4a2c20;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;           /* المسافة بين كل عنصر والتاني */
-   padding-left: 100px;   /* جرب رقم من 10 لـ 25 لحد ما يظبط */
-}
-
-.hero-content .small-text {
-  margin: 0;
-  padding-left: 50px;
-   color: #F46A16;
-   font-family: var(--font-fredoka);
-     font-weight: 600;
-}
-
-  
-
-.hero-content .welcome {
-  margin: 0;
-  font-size: 50px;
-   padding-left: 50px;   /* جرب رقم من 10 لـ 25 لحد ما يظبط */
-   font-family: var(--font-baloo);
-  font-weight: 700
-}
-
-.can-can-title {
-  width: 400px;
-  height: auto;
-  margin: 0px 0;
-}
-
-
-.hero-content .description {
-  margin: 0;
-  font-size: 16px;
-  max-width: 450px;
-   padding-left: 50px;   /* جرب رقم من 10 لـ 25 لحد ما يظبط */
-   font-family: var(--font-baloo);
-  font-weight: 700
-}
-
-.hero-content button {
-  margin-top: 12px;
-  margin-left: 50px;
-  padding: 14px 30px;
-  border: none;
-  border-radius: 8px;
-  background: #d96b27;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-/* على الشاشات الصغيرة (موبايل) */
-@media (max-width: 768px) {
-  .hero-content {
-    width: 100%;
-    padding-left: 20px;
-  }
-
-  .hero-content .welcome,
-  .hero-content .description {
-    padding-left: 10px;
-  }
-
-  .hero-content button {
-    margin-left: 10px;
-  }
-  .categories-section {
-  width: 100%;
-  padding: 45px 6% 40px;
-  background: #f8f1e7;
-  overflow: hidden;
-}
-/* ===== أساسيات الموبايل ===== */
+/* ===== أساسيات ===== */
 img {
   max-width: 100%;
   height: auto;
@@ -155,76 +8,65 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== Hero ===== */
-.hero {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  padding: 40px 20px;
-}
-
-.hero-content {
+.categories-section {
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.small-text  { font-size: clamp(12px, 3vw, 16px); }
-.welcome     { font-size: clamp(32px, 9vw, 64px); line-height: 1.1; }
-.description { font-size: clamp(14px, 3.8vw, 18px); }
-
-.can-can-title {
-  display: block;
-  width: min(320px, 80%);
-  height: auto;
-}
-
-/* ===== الشبكات (الكاتيجوري والمنتجات) ===== */
-.categories-grid,
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
+  padding: 45px 6% 40px;
+  background: #f8f1e7;
+  overflow: hidden;
 }
 
 /* ===== موبايل ===== */
-@media (max-width: 600px) {
-  .hero {
-    min-height: 70vh;
-    text-align: center;
+@media (max-width: 768px) {
+
+  /* ---------- Navbar ---------- */
+  nav {
+    position: static;
+    height: auto;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    background: #fff8f0;
   }
 
-  .can-can-title {
-    margin: 0 auto;
+  .logo { order: 1; }
+  .logo img { width: 120px; }
+
+  nav > div:last-child { order: 2; }
+  nav button {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
   }
 
-  .hero button {
+  .nav-links {
+    order: 3;
     width: 100%;
-    max-width: 260px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 18px;
   }
-}
-@media (max-width: 600px) {
+  .nav-links a { font-size: 15px; }
+
   /* ---------- Hero ---------- */
   .hero {
+    height: auto;
     min-height: 75vh;
-    padding: 30px 20px;
-    text-align: center;
+    margin-top: 0;
+    padding: 40px 20px;
     justify-content: center;
     position: relative;
   }
 
-  /* طبقة غامقة خفيفة عشان الكلام يبان فوق الصورة */
   .hero::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(255, 245, 235, 0.85) 0%,
-      rgba(255, 245, 235, 0.65) 60%,
-      rgba(255, 245, 235, 0.2) 100%
+      rgba(255, 245, 235, 0.85),
+      rgba(255, 245, 235, 0.55)
     );
     z-index: 0;
   }
@@ -232,35 +74,34 @@ body {
   .hero-content {
     position: relative;
     z-index: 1;
-    margin: 0 auto;
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
     text-align: center;
   }
 
-  .can-can-title {
-    margin: 0 auto;
-    width: min(240px, 70%);
+  .hero-content .small-text,
+  .hero-content .welcome,
+  .hero-content .description {
+    padding-left: 0;
   }
 
-  .description {
-    font-weight: 600;
+  .hero-content .small-text { font-size: 13px; }
+  .hero-content .welcome { font-size: clamp(32px, 9vw, 50px); }
+
+  .can-can-title {
+    width: min(260px, 70%);
+  }
+
+  .hero-content .description {
+    max-width: 100%;
+    font-size: 15px;
     line-height: 1.5;
   }
 
-  .hero button {
+  .hero-content button {
+    margin-left: 0;
     width: 100%;
     max-width: 240px;
   }
-
-  /* ---------- Navbar ---------- */
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px 18px;
-    padding: 12px 16px;
-  }
-
-  nav a {
-    font-size: 15px;
-  }
-}
 }
