@@ -4,43 +4,17 @@ import Image from "next/image";
 import "./CategoriesSection.css";
 
 const categories = [
-  {
-    name: "Chocolates",
-    image: "/categories/ch1.png",
-    link: "/category/chocolates",
-  },
-  {
-    name: "Gummies",
-    image: "/categories/ch2.png",
-    link: "/category/gummies",
-  },
-  {
-    name: "Lollipops",
-    image: "/categories/ch3.png",
-    link: "/category/lollipops",
-  },
-  {
-    name: "Gift Boxes",
-    image: "/categories/ch4.png",
-    link: "/category/gift-boxes",
-  },
-  {
-    name: "Sour Candies",
-    image: "/categories/ch5.png",
-    link: "/category/sour-candies",
-  },
-  {
-    name: "Party Mix",
-    image: "/categories/ch6.png",
-    link: "/category/party-mix",
-  },
+  { name: "Chocolates", image: "/categories/ch1.png" },
+  { name: "Gummies", image: "/categories/ch2.png" },
+  { name: "Lollipops", image: "/categories/ch3.png" },
+  { name: "Gift Boxes", image: "/categories/ch4.png" },
+  { name: "Sour Candies", image: "/categories/ch5.png" },
+  { name: "Party Mix", image: "/categories/ch6.png" },
 ];
 
 export default function CategoriesSection() {
   return (
     <section className="categories-section">
-      
-      {/* Heading */}
       <div className="categories-heading">
         <span className="categories-subtitle">
           SHOP BY CATEGORY
@@ -48,18 +22,15 @@ export default function CategoriesSection() {
 
         <div className="title-wrapper">
           <span className="decor-line left"></span>
-
           <h2>Our Categories</h2>
-
           <span className="decor-line right"></span>
         </div>
       </div>
 
-      {/* Categories */}
       <div className="categories-grid">
         {categories.map((category) => (
           <a
-            href={category.link}
+            href="#products"
             className="category-card"
             key={category.name}
           >
@@ -79,7 +50,6 @@ export default function CategoriesSection() {
           </a>
         ))}
       </div>
-
     </section>
   );
 }

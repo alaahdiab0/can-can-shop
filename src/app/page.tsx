@@ -11,16 +11,21 @@ import Hero from "@/components/Hero";
 export default function Home() {
   return (
     <main>
-      <Navbar />
-      
-      <Hero />
-      <CategoriesSection />
-      <FeaturedProducts />
+      <div id="home">
+        <Navbar />
+        <Hero />
+      </div>
+
+      <div id="products">
+        <CategoriesSection />
+        <FeaturedProducts />
+      </div>
+
       <PromoBanner />
-      <FooterSection />
-     
+
+      <div id="about">
+        <FooterSection />
+      </div>
     </main>
   );
-
-
 }
